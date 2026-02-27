@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>V-Craft Engineering Works</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;overflow-x:hidden;
+}
+
+/* ROTATING GEARS */
+.gear{
+  position:fixed;
+  background:url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png') no-repeat center/contain;
+  opacity:0.08;z-index:-1;
+}
+.gear-left{top:-120px;left:-120px;width:320px;height:320px;animation:spin 25s linear infinite;}
+.gear-right{bottom:-150px;right:-150px;width:380px;height:380px;animation:spinReverse 30s linear infinite;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes spinReverse{from{transform:rotate(360deg);}to{transform:rotate(0deg);}}
+
+/* NAVBAR */
+nav{background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:15px 40px;position:sticky;top:0;z-index:1000;}
+nav h1{font-size:20px;letter-spacing:1px;}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s;}
+nav a:hover{color:#00d4ff}
+
+/* HERO */
+.hero{height:60vh;display:flex;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at center,rgba(0,212,255,0.1),transparent);}
+.hero h2{font-size:40px;margin-bottom:10px;}
+.hero p{color:#ddd}
+
+/* SECTIONS */
+.section{padding:70px 40px;text-align:center;}
+.section h2{font-size:32px;margin-bottom:40px;color:#00d4ff;}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.card{
+  background:rgba(255,255,255,0.08);border-radius:20px;padding:25px;
+  backdrop-filter:blur(12px);box-shadow:0 0 30px rgba(0,212,255,0.1);
+  transition:0.4s;
+}
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 0 40px rgba(0,212,255,0.4);}
+.card img{width:100%;height:180px;object-fit:contain;margin-bottom:15px;}
+.card h4{color:#00ffcc;margin:10px 0}
+
+/* BUTTON */
+.btn{
+  background:linear-gradient(45deg,#00d4ff,#00ffcc);
+  border:none;padding:12px 20px;border-radius:30px;
+  font-weight:bold;cursor:pointer;color:#000;
+  transition:0.3s;text-decoration:none;display:inline-block;
+}
+.btn:hover{transform:scale(1.05);}
+
+/* FORM */
+.form-box{max-width:500px;margin:auto;background:rgba(255,255,255,0.08);padding:30px;border-radius:20px;backdrop-filter:blur(12px);}
+.input-group{position:relative;margin-bottom:25px;}
+.input-group input,.input-group textarea{
+  width:100%;padding:12px;border:none;border-radius:8px;
+  background:rgba(255,255,255,0.1);color:#fff;
+}
+.input-group label{
+  position:absolute;left:12px;top:12px;color:#aaa;
+  transition:0.3s;pointer-events:none;
+}
+.input-group input:focus+label,
+.input-group input:valid+label,
+.input-group textarea:focus+label,
+.input-group textarea:valid+label{
+  top:-10px;font-size:12px;color:#00d4ff;
+}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.contact-card{background:rgba(255,255,255,0.08);padding:25px;border-radius:20px;backdrop-filter:blur(12px);}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;background:#000;margin-top:40px;}
+</style>
+</head>
+
+<body>
+
+<!-- Rotating Gears -->
+<div class="gear gear-left"></div>
+<div class="gear gear-right"></div>
+
+<nav>
+  <h1>V-CRAFT ENGINEERING WORKS</h1>
+  <ul>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#quotations">Quotations</a></li>
+    <li><a href="#quote">Request Quote</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div>
+    <h2>Industrial Mechanical Solutions</h2>
+    <p>Precision Engineering | Custom Fabrication | Quality Manufacturing</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+  <h2>Our Products</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="pet.png">
+      <h3>Pet Blow Mould</h3>
+      <p>High precision engineered shaft component.</p>
+      <h4>₹ 50,000</h4>
+    </div>
+
+    <div class="card">
+      <img src="injection.png">
+      <h3>Injection Mould</h3>
+      <p>Durable mechanical transmission gear.</p>
+      <h4>₹ 70,500</h4>
+    </div>
+
+    <div class="card">
+      <img src="plastic_injection.png">
+      <h3>Plastic Injection</h3>
+      <p>Customized industrial machine component.</p>
+      <h4>₹ 120,000</h4>
+    </div>
+  </div>
+</section>
+
+<!-- OWN QUOTATION SECTION -->
+<section id="quotations" class="section">
+  <h2>Download Product Quotations</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Pet Blow Mould</h3>
+      <a href="pdfs/pet-blow-mould.pdf" target="_blank" class="btn">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <h3>Injection Mould</h3>
+      <a href="pdf/injection-mould.pdf" target="_blank" class="btn">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <h3>Plastic Injection</h3>
+      <a href="pdf/plastic-injection.pdf" target="_blank" class="btn">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST FORM -->
+<section id="quote" class="section">
+  <h2>Request Quotation</h2>
+  <div class="form-box">
+    <form id="quoteForm">
+      <div class="input-group">
+        <input type="text" required><label>Client Name</label>
+      </div>
+      <div class="input-group">
+        <input type="email" required><label>Email Address</label>
+      </div>
+      <div class="input-group">
+        <input type="text" required><label>Product Name</label>
+      </div>
+      <div class="input-group">
+        <textarea rows="3" required></textarea><label>Requirement Details</label>
+      </div>
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Address</h3>
+      <p>Dahisar East, Thane, Mumbai-400068, Maharashtra, India</p>
+    </div>
+    <div class="contact-card">
+      <h3>Call</h3>
+      <p>+91 9029050171</p>
+    </div>
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>snjvadgama@gmail.com</p>
+    </div>
+  </div>
+
+  <a href="https://wa.me/919029050171" target="_blank" class="btn" style="margin-top:40px;">WhatsApp Instant Enquiry</a>
+</section>
+
+<footer>
+© 2026 V-Craft Engineering Works | Sanjay Vadgama
+</footer>
+
+<script>
+document.getElementById("quoteForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Quotation Request Submitted!");
+});
+</script>
+
+</body>
+</html>
